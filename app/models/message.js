@@ -10,5 +10,6 @@ export default class MessageModel extends Model {
     defaultValue() {
       return new Date();
     },
-  }) postedAt;
+  })
+  postedAt;
 }
