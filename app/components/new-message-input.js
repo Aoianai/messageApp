@@ -10,19 +10,16 @@ export default class NewMessageInputComponent extends Component {
 
   @action
   addMessage() {
-    let message = this.store.createRecord('message', {
+    const message = this.store.createRecord('message', {
       id: idCount++,
       title: 'defaultTitle',
       initial: 'D',
       username: this.username,
       content: this.messageText,
       isCurrentUser: true,
-      postedAt: Date,
     });
     console.log('record created');
     message.save();
     console.log('record saved');
-    this.store.push();
-    console.log('record pushed');
   }
 }

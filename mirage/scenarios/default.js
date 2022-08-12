@@ -1,3 +1,10 @@
 export default function (server) {
-  server.createList('message', 10);
+  server.create('message', {
+    title: 'MR',
+    initial: 'T',
+    username: 'Lawrence Tureaud',
+    content: 'Hey!',
+    'is-current-user': false,
+    'posted-at': Date(),
+  });
 }

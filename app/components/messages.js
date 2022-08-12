@@ -5,7 +5,4 @@ import { inject as service } from '@ember/service';
 
 export default class MessagesComponent extends Component {
   @service store;
-  fetchMessages() {
-    return this.store.findAll('message');
-  }
 }

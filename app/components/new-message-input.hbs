@@ -1,4 +1,6 @@
-<Input @value={{this.messageText}} />
-<button {{on "click" this.addMessage}}>
-  Send
-</button>
+<div class="input-box">
+  <Input id="input-message" @value={{this.messageText}}/>
+  <button type="button" {{on "click" this.addMessage}}>
+    Send
+  </button>
+</div>

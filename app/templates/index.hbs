@@ -1,2 +1,18 @@
 <h2>index.hbs</h2>
-<Messages @messages={{@model}} />
+<div class="messages">
+  <ul>
+    {{#each @model as |message|}}
+      <Message::Avatar
+        @title="{{message.username}}'s Avatar"
+        @initial={{substring message.username start=0 end=1}}
+        @isCurrentUser={{message.isCurrentUser}}
+        class="{{if message.isCurrentUser true}}"
+      />
+      <section>
+      <Message::Username @username={{message.username}} @postedAt={{message.postedAt}} />
+      </section>
+      {{message.content}}
+    {{/each}}
+  </ul>
+</div>
+<NewMessageInput @onCreate={{this.addMessage}} />

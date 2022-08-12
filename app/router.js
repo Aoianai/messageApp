@@ -10,4 +10,5 @@ Router.map(function () {
   this.route('/');
   this.route('about');
   this.route('messages');
+  this.route('messaages');
 });
