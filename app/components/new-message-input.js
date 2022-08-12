@@ -3,35 +3,19 @@ import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
 
 /* app starts with id 0 & 1 in use by preloaded records */
-let idCount = 1;
+let idCount = 2;
 
 export default class NewMessageInputComponent extends Component {
   @service store;
 
   @action
-  addMessage(messageText) {
-    this.store.push({
-      data: [
-        {
-          id: idCount,
-          type: 'message',
-          attributes: {
-            title: 'default title',
-            initial: 'D',
-            username: this.username,
-            content: messageText,
-            isCurrentUser: true,
-            postedAt: Date(),
-          },
-        },
-      ],
-    });
-    /*
+  addMessage() {
     let message = this.store.createRecord('message', {
+      id: idCount++,
       title: 'defaultTitle',
       initial: 'D',
       username: this.username,
-      content: messageText,
+      content: this.messageText,
       isCurrentUser: true,
       postedAt: Date,
     });
@@ -40,7 +24,5 @@ export default class NewMessageInputComponent extends Component {
     console.log('record saved');
     this.store.push();
     console.log('record pushed');
- */
   }
-  idCount = idCount++;
 }

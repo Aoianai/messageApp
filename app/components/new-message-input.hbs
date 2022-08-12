@@ -1,6 +1,4 @@
-<form {{on "submit" this.addMessage}}>
-  <Input @value={{this.messageText}} />
-  <button type="submit">
-    Send
-  </button>
-</form>
+<Input @value={{this.messageText}} />
+<button {{on "click" this.addMessage}}>
+  Send
+</button>
