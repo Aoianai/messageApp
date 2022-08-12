@@ -14,7 +14,7 @@ export default class NewMessageInputComponent extends Component {
       id: idCount++,
       title: 'defaultTitle',
       initial: 'D',
-      username: this.username,
+      username: this.customUsername,
       content: this.messageText,
       isCurrentUser: true,
     });

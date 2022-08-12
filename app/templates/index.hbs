@@ -1,4 +1,5 @@
 <h2>index.hbs</h2>
+<UsernameInput @onCreate={{this.setUsername}} />
 <div class="messages">
   <ul>
     {{#each @model as |message|}}

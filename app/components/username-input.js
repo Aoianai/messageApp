@@ -4,9 +4,13 @@ import { inject as service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 
 export default class UsernameInputComponent extends Component {
-  @tracked customUsername;
+  @tracked customUsername = 'user name';
+
   @action
   setUsername() {
-    username:
+    console.log(this.customUsername);
+    this.customUsername = this.usernameText;
+    console.log(this.usernameText);
+    console.log(this.customUsername);
   }
 }
