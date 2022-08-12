@@ -7,7 +7,7 @@ export default class ApplicationRoute extends Route {
     this.store.push({
       data: [
         {
-          id: 1,
+          id: 0,
           type: 'message',
           attributes: {
             title: 'default title',
@@ -19,7 +19,7 @@ export default class ApplicationRoute extends Route {
           },
         },
         {
-          id: 2,
+          id: 1,
           type: 'message',
           attributes: {
             title: 'default title 2',

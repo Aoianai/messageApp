@@ -15,12 +15,8 @@
 --}}
 
 <div class="messages">
-  <ul class="messages">
-    <Messages::Filter @messages={{@messages}} @query={{this.query}} as |results|>
-      {{#each results as |message|}}
-        <li><Message @message={{message}} /></li>
-      {{/each}}
-    </Messages::Filter>
-  </ul>
+
+  {{!-- load messages into here --}}
+
   <NewMessageInput @onCreate={{this.addMessage}} />
 </div>
