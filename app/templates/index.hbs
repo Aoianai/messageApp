@@ -10,7 +10,7 @@
         class="{{if message.isCurrentUser true}}"
       />
       <section>
-      <Message::Username @username={{message.username}} @postedAt={{message.postedAt}} />
+        <Message::Username @username={{message.username}} @postedAt={{message.postedAt}} />
       </section>
       {{message.content}}
     {{/each}}

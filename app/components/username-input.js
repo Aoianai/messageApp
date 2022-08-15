@@ -10,7 +10,6 @@ export default class UsernameInputComponent extends Component {
   setUsername() {
     console.log(this.customUsername);
     this.customUsername = this.usernameText;
-    console.log(this.usernameText);
     console.log(this.customUsername);
   }
 }
