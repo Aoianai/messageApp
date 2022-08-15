@@ -1,3 +1,5 @@
+import { Response } from 'miragejs';
+
 export default function () {
   this.get('/api/messages', function (schema, request) {
     return schema.messages.all();
@@ -14,5 +16,15 @@ export default function () {
       'is-current-user': requestJson['is-current-user'],
       'posted-at': Date(),
     });
+  });
+
+  this.delete('/api/messages/:id', function (schema, request) {
+    const foundMessage = schema.messages.find(request.params.id);
+    if (foundMessage) {
+      foundMessage.destroy();
+      return new Response(204);
+    } else {
+      return new Response(404);
+    }
   });
 }
