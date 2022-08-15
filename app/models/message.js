@@ -7,4 +7,8 @@ export default class MessageModel extends Model {
   @attr('string', { defaultValue: ' ' }) content;
   @attr('boolean', { defaultValue: false }) isCurrentUser;
   @attr('date') postedAt;
+
+  set content(newText) {
+    this.setContent = newText;
+  }
 }

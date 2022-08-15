@@ -13,6 +13,8 @@
         <Message::Username @username={{message.username}} @postedAt={{message.postedAt}} />
       </section>
       {{message.content}}
+      <EditButton @onCreate={{this.showMessageEditBox}} @value={{message.id}} />
+      <DeleteButton @onCreate={{this.deleteMessage}} @value={{message.id}} />
     {{/each}}
   </ul>
 </div>
