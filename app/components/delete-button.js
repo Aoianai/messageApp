@@ -8,7 +8,7 @@ export default class DeleteButtonComponent extends Component {
   @action
   deleteMessage() {
     console.log('delete message');
-    const message = this.store.peekRecord('message', );
+    const message = this.store.peekRecord('message', 1);
     message.destroyRecord();
   }
 }
