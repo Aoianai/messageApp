@@ -3,8 +3,6 @@
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 Q
 !mirage/serializers/application.js,c\f\cf0e0a90c9767414b919823cc1bd6a041df24046
-K
-mirage/scenarios/default.js,d\5\d540f6b0a76f3cb57f3b8873b87adaffdc5dbcf1
 =
 app/router.js,2\4\241e0b89a7ef90b3ad54769f05ca046cb2954297
 :

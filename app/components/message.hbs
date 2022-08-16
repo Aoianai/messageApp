@@ -1,0 +1,14 @@
+
+
+<Message::Avatar
+  @title="{{this.args.message.username}}'s Avatar"
+  @initial={{substring this.args.message.username start=0 end=1}}
+  @isCurrentUser={{this.args.message.isCurrentUser}}
+  class="{{if this.args.message.isCurrentUser true}}"
+/>
+<section>
+  <Message::Username @username={{this.args.message.username}} @postedAt={{this.args.message.postedAt}} />
+</section>
+{{this.args.message.content}}
+<button class="message-button" type="button" {{on "click" this.showMessageEditBox}}>&#128465;</button>
+<button class="message-button" type="button" {{on "click" this.deleteMessage}}>&#128393;</button>

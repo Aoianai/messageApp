@@ -1,20 +1,8 @@
 <h2>index.hbs</h2>
-<UsernameInput @onCreate={{this.setUsername}} />
 <div class="messages">
   <ul>
     {{#each @model as |message|}}
-      <Message::Avatar
-        @title="{{message.username}}'s Avatar"
-        @initial={{substring message.username start=0 end=1}}
-        @isCurrentUser={{message.isCurrentUser}}
-        class="{{if message.isCurrentUser true}}"
-      />
-      <section>
-        <Message::Username @username={{message.username}} @postedAt={{message.postedAt}} />
-      </section>
-      {{message.content}}
-      <EditButton @onCreate={{this.showMessageEditBox}} @value={{message.id}} />
-      <DeleteButton @onCreate={{this.deleteMessage}} @value={{message.id}} />
+      <Message @message={{message}} />
     {{/each}}
   </ul>
 </div>
