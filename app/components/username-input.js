@@ -9,22 +9,8 @@ export default class UsernameInputComponent extends Component {
 
   @action
   setUsername() {
-    console.log(this.customUsername);
-    this.customUsername = this.usernameText;
-    /* let customName = this.usernameText; */
-    console.log(this.customUsername);
-
-    /*
-    this.store.query('message', {
-        filter: {
-          isCurrentUser: true,
-        },
-      })
-      .then(function (userMessages) {
-        for (let i=0; i < userMessages.length; i++) {
-          userMessages[i].username: customName;
-        }
-      });
-    */
+    let newUserText = prompt('Enter your new Username: ', 'hiya :)');
+    const message = this.store.peekRecord('message', 1);
+    message.username = newUserText;
   }
 }

@@ -27,4 +27,14 @@ export default function () {
       return new Response(404);
     }
   });
+
+  this.patch('/api/messages/:id', function (schema, request) {
+    const editMessage = schema.messages.find(request.params.id);
+    if (editMessage) {
+      editMessage.patch();
+      return new Response(204);
+    } else {
+      return new Response(404);
+    }
+  });
 }
