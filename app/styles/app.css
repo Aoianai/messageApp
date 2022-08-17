@@ -100,3 +100,26 @@ button {
   border: 1px solid #cccccc;
   font-size: 1em;
 }
+
+div.content {
+  padding: 1em;
+  width: 650px;
+  display: inline;
+}
+
+div.content-buttons {
+  padding: 5em;
+  width: 50px;
+  display: inline;
+  margin-left: 1em;
+}
+
+input#input-message {
+  width: 500px;
+  height:30px;
+  padding: 0.25em;
+  border: 1px solid #cccccc;
+  font-size: 1em;
+  margin: 1rem;
+  margin-right: 0px;
+}

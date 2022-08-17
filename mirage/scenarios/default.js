@@ -1,7 +1,7 @@
 export default function (server) {
   server.create('message', {
-    title: 'MR',
-    initial: 'T',
+    title: '',
+    initial: 'L',
     username: 'Lawrence Tureaud',
     content: 'Hey!',
     'is-current-user': false,

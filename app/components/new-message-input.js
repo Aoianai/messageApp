@@ -15,7 +15,7 @@ export default class NewMessageInputComponent extends Component {
     const message = this.store.createRecord('message', {
       id: idCount++,
       title: `${this.customUsername}'s Avatar`,
-      initial: `${this.customUsername.charAt(0)}`,
+      initial: `${this.customUsername.charAt(0).toUpperCase()}`,
       username: this.customUsername,
       content: this.messageText,
       isCurrentUser: true,

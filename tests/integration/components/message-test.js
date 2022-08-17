@@ -2,25 +2,20 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'message-app/tests/helpers';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
+import { createMessages } from 'message-app/tests/helpers/create-messages';
 
 module('Integration | Component | message', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+  hooks.beforeEach(function () {
+    this.store = this.owner.lookup('service:store');
+    this.messages = createMessages(this.store);
+    this.message = this.messages[0];
+  });
 
-    await render(hbs`<Message />`);
+  test('Message content is displayed correctly', async function (assert) {
+    await render(hbs`<Message @message={{this.message}} />`);
 
-    assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <Message>
-        template block text
-      </Message>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
+    assert.dom(this.element.getElementsByClassName('content')[0]).hasText("Hello");
   });
 });

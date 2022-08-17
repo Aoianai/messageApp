@@ -1,6 +1,6 @@
 <h4 class="username">
-  {{@username}}
-  {{#if @postedAt}}
-    <span class="local-time">sent on: {{@postedAt}}</span>
+  {{@message.username}}
+  {{#if @message.postedAt}}
+    <span class="local-time">sent on: {{@message.postedAt}}</span>
   {{/if}}
 </h4>

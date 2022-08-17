@@ -10,5 +10,5 @@ Q
 app/app.js,b\7\b7155d837abd677a4a43b03ae47196714f63b5bb
 >
 app/index.html,4\2\42b3d80c2627e668532f60c5dd3d7406656dfce0
-M
-app/templates/application.hbs,8\c\8c1f6e4b63df8f1533291bf9b1f027ecad2ae06e
+@
+mirage/config.js,4\9\49a4196e12bc1e5ae8f04926f53449de28b93fde

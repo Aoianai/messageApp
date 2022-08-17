@@ -8,7 +8,15 @@ export default class MessageModel extends Model {
   @attr('boolean', { defaultValue: false }) isCurrentUser;
   @attr('date') postedAt;
 
-  set setContent(newText) {
+  set content(newText) {
     this.content = newText;
+  }
+
+  get initial() {
+    if (this.username) {
+      return this.username.charAt(0).toUpperCase();
+    } else {
+      return '';
+    }
   }
 }
